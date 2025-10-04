@@ -1,0 +1,1 @@
+My name is Thomas and I'm a first year Computer Engineering major. I love to watch soccer and play golf. I decided to take this asynchronous CS1331 class because I have previously self-studied OOP in C++ and wanted a way to learn it in Java on my own time.

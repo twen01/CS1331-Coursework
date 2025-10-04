@@ -1,0 +1,3 @@
+Bad1: Compile Time, file name is not the same as class name
+Bad2: Runtime error, cannot divide by zero
+Bad3: Compile Time, cannot instantiate string as char
