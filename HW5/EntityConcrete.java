@@ -1,3 +1,10 @@
+/**
+ * Concrete class extending Entity.
+ *
+ * @author CS 1331 TAs
+ * @version 1.0
+ */
+
 public class EntityConcrete extends Entity {
 
     /**
