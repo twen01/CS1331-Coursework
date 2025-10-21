@@ -87,7 +87,7 @@ public class Archer extends Troop implements Treatable {
     }
 
     /**
-     * health less than 80?
+     * health less than 80.
      *
      * @return boolean
      */

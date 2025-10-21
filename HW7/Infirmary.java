@@ -23,7 +23,7 @@ public class Infirmary {
      *
      * @return the number of infirmaries
      */
-    public int getNumberOfInfirmaries() {
+    public static int getNumberOfInfirmaries() {
         return numberOfInfirmaries;
     }
 

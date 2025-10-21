@@ -86,7 +86,7 @@ public class Barbarian extends Troop implements Treatable {
     }
 
     /**
-     * health maximum?
+     * health maximum?.
      *
      * @return true if needs treatment
      */
@@ -95,7 +95,7 @@ public class Barbarian extends Troop implements Treatable {
     }
 
     /**
-     * WHY ARE YOU MAKING ME DO THIS AAAARGH!
+     * WHY ARE YOU MAKING ME DO THIS AAAARGH!.
      */
     public void scream() {
         System.out.println("AAAARGH!");
