@@ -1,6 +1,6 @@
 /**
- * Abstract Class that represents a tropp in the army
- * 
+ * Abstract Class that represents a tropp in the army.
+ *
  * @author Thomas Wen
  * @version 1
  */
@@ -10,11 +10,11 @@ public abstract class Troop {
     private int health;
 
     /**
-     * Sets instance variables
-     * 
-     * @param name
-     * @param experienceLevel
-     * @param health
+     * Sets instance variables.
+     *
+     * @param name the name
+     * @param experienceLevel the experience level
+     * @param health the health
      */
     public Troop(String name, int experienceLevel, int health) {
         setName(name);
@@ -23,14 +23,16 @@ public abstract class Troop {
     }
 
     /**
-     * Abstract method to have a troop train with another to gain experience
-     * 
-     * @param p
+     * Abstract method to have a troop train with another to gain experience.
+     *
+     * @param p the troop
      */
     public abstract void trainWith(Troop p);
 
     /**
-     * Returns the below
+     * Returns the below.
+     *
+     * @return the string representation
      */
     @Override
     public String toString() {
@@ -38,9 +40,10 @@ public abstract class Troop {
     }
 
     /**
-     * Checks if two Troops have the same instance variable values
-     * 
-     * @param o
+     * Checks if two Troops have the same instance variable values.
+     *
+     * @param o the object to compare
+     * @return true if equal, false otherwise
      */
     @Override
     public boolean equals(Object o) {
@@ -52,45 +55,45 @@ public abstract class Troop {
     }
 
     /**
-     * Return name
-     * 
-     * @return
+     * Return name.
+     *
+     * @return the name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Return experience level
-     * 
-     * @return
+     * Return experience level.
+     *
+     * @return the experience level
      */
     public int getExperienceLevel() {
         return experienceLevel;
     }
 
     /**
-     * Return health
-     * 
-     * @return
+     * Return health.
+     *
+     * @return the health
      */
     public int getHealth() {
         return health;
     }
 
     /**
-     * Set name
-     * 
-     * @param name
+     * Set name.
+     *
+     * @param name the name
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Set experience level
-     * 
-     * @param experienceLevel
+     * Set experience level.
+     *
+     * @param experienceLevel the experience level
      */
     public void setExperienceLevel(int experienceLevel) {
         if (experienceLevel < 1) {
@@ -103,15 +106,15 @@ public abstract class Troop {
     }
 
     /**
-     * Set health
-     * 
-     * @param health
+     * Set health.
+     *
+     * @param health the health
      */
     public void setHealth(int health) {
-        if (this.health < 1) {
+        if (health < 1) {
             this.health = 1;
-        } else if (this.health > 50) {
-            this.health = 50;
+        } else if (health > 100) {
+            this.health = 100;
         } else {
             this.health = health;
         }
