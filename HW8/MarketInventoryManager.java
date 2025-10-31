@@ -3,13 +3,12 @@
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.InputMismatchException;
-import java.util.NoSuchElementException;
+// Removed unused imports: InputMismatchException, NoSuchElementException
 import java.util.Scanner;
 
 /**
  * Used to manage market inventory.
- * 
+ *
  * @author Thomas Wen
  * @version 1
  */
@@ -19,9 +18,9 @@ public class MarketInventoryManager {
 
     /**
      * Two-arg constructor.
-     * 
-     * @param products
-     * @param money
+     *
+     * @param products array of products
+     * @param money amount of money
      */
     private MarketInventoryManager(Product[] products, int money) {
         this.products = products;
@@ -30,11 +29,11 @@ public class MarketInventoryManager {
 
     /**
      * market inventory manager.
-     * 
-     * @param f
-     * @return
-     * @throws IOException
-     * @throws MalformedInventoryFileException
+     *
+     * @param f file to read from
+     * @return a MarketInventoryManager instance
+     * @throws IOException if file cannot be read
+     * @throws MalformedInventoryFileException if file is not valid
      */
     public static MarketInventoryManager fromFile(File f) throws IOException, MalformedInventoryFileException {
         Scanner scanner = null;
@@ -91,7 +90,10 @@ public class MarketInventoryManager {
                     }
                 }
 
-                int buyPrice, sellPrice, quantity;
+                // Fixed: MultipleVariableDeclarations error
+                int buyPrice;
+                int sellPrice;
+                int quantity;
                 try {
                     buyPrice = Integer.parseInt(lineParts[1]);
                     sellPrice = Integer.parseInt(lineParts[2]);
@@ -122,10 +124,10 @@ public class MarketInventoryManager {
 
     /**
      * Used when buying products from suppliers.
-     * 
-     * @param id
-     * @param quantity
-     * @throws CannotFulfillTransactionException
+     *
+     * @param id product id
+     * @param quantity quantity to buy
+     * @throws CannotFulfillTransactionException if transaction cannot be fulfilled
      */
     public void buy(String id, int quantity) throws CannotFulfillTransactionException {
         if (quantity < 0) {
@@ -153,10 +155,10 @@ public class MarketInventoryManager {
 
     /**
      * Sell products.
-     * 
-     * @param id
-     * @param quantity
-     * @throws CannotFulfillTransactionException
+     *
+     * @param id product id
+     * @param quantity quantity to sell
+     * @throws CannotFulfillTransactionException if transaction cannot be fulfilled
      */
     public void sell(String id, int quantity) throws CannotFulfillTransactionException {
         if (quantity < 0) {
@@ -184,8 +186,8 @@ public class MarketInventoryManager {
 
     /**
      * Return ids.
-     * 
-     * @return
+     *
+     * @return array of product IDs
      */
     public String[] marketProducts() {
         String[] ids = new String[products.length];
@@ -198,9 +200,9 @@ public class MarketInventoryManager {
 
     /**
      * Save to a file.
-     * 
-     * @param f
-     * @throws IOException
+     *
+     * @param f file to save to
+     * @throws IOException if any occurs
      */
     public void saveToFile(File f) throws IOException {
         PrintWriter p = null;
@@ -209,7 +211,7 @@ public class MarketInventoryManager {
             p = new PrintWriter(f);
             p.println(products.length + " " + money);
             for (Product a : products) {
-                p.println(a.getId() + "," + a.getBuyPrice() + "," + a.getSellPrice() + "," + a.getQuantity());
+                p.println(a.toString());
             }
         } catch (IOException e) {
             throw e;
@@ -222,8 +224,8 @@ public class MarketInventoryManager {
 
     /**
      * Main method.
-     * 
-     * @param args
+     *
+     * @param args command line arguments
      */
     public static void main(String[] args) {
         if (args.length != 1) {

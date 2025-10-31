@@ -1,6 +1,6 @@
 /**
- * Represents products for market inventory;
- * 
+ * Represents products for market inventory.
+ *
  * @author Thomas Wen
  * @version 1
  */
@@ -12,11 +12,11 @@ public class Product {
 
     /**
      * Four-arg constructor.
-     * 
-     * @param id
-     * @param buyPrice
-     * @param sellPrice
-     * @param quantity
+     *
+     * @param id product id
+     * @param buyPrice product buy price
+     * @param sellPrice product sell price
+     * @param quantity product quantity
      */
     public Product(String id, int buyPrice, int sellPrice, int quantity) {
         this.id = id;
@@ -27,8 +27,8 @@ public class Product {
 
     /**
      * get id.
-     * 
-     * @return
+     *
+     * @return the id
      */
     public String getId() {
         return id;
@@ -36,8 +36,8 @@ public class Product {
 
     /**
      * get buy price.
-     * 
-     * @return
+     *
+     * @return the buy price
      */
     public int getBuyPrice() {
         return buyPrice;
@@ -45,8 +45,8 @@ public class Product {
 
     /**
      * get sell price.
-     * 
-     * @return
+     *
+     * @return the sell price
      */
     public int getSellPrice() {
         return sellPrice;
@@ -54,44 +54,17 @@ public class Product {
 
     /**
      * get quantity.
-     * 
-     * @return
+     *
+     * @return the quantity
      */
     public int getQuantity() {
         return quantity;
     }
 
     /**
-     * set id.
-     * 
-     * @param str
-     */
-    public void setId(String str) {
-        id = str;
-    }
-
-    /**
-     * set buy price.
-     * 
-     * @param n
-     */
-    public void setBuyPrice(int n) {
-        buyPrice = n;
-    }
-
-    /**
-     * set sell price.
-     * 
-     * @param n
-     */
-    public void setSellPrice(int n) {
-        sellPrice = n;
-    }
-
-    /**
      * set quantity.
-     * 
-     * @param n
+     *
+     * @param n the new quantity
      */
     public void setQuantity(int n) {
         quantity = n;
@@ -99,8 +72,8 @@ public class Product {
 
     /**
      * to string.
-     * 
-     * @return
+     *
+     * @return String representation of product
      */
     @Override
     public String toString() {
