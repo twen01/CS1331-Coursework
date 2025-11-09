@@ -1,21 +1,25 @@
+//I worked on the homework assignment alone, using only course materials.
+
 /**
  * Class to manage data in a linked list.
- * 
+ *
  * @author Thomas Wen
  * @version 1
+ * @param <E> the type of elements in this linked list
  */
 public class LinkedList<E> {
     /**
      * Private inner class.
-     * 
+     *
      * @author Thomas Wen
      * @version 1
+     * @param <E> the type of elements in this node
      */
     private class Node<E> {
-        E data;
-        Node<E> next;
+        private E data;
+        private Node<E> next;
 
-        Node(E data, Node<E> next) {
+        private Node(E data, Node<E> next) {
             this.data = data;
             this.next = next;
         }
@@ -26,16 +30,16 @@ public class LinkedList<E> {
 
     /**
      * 0-arg constructor.
-     * 
+     *
      */
-    LinkedList() {
+    public LinkedList() {
         head = null;
         size = 0;
     }
 
     /**
      * Get size.
-     * 
+     *
      * @return size
      */
     public int size() {
@@ -44,7 +48,7 @@ public class LinkedList<E> {
 
     /**
      * Is size 0?.
-     * 
+     *
      * @return size is 0?
      */
     public boolean isEmpty() {
@@ -61,13 +65,14 @@ public class LinkedList<E> {
 
     /**
      * Add a value at specific index.
-     * 
+     *
      * @param index index to add
      * @param data  data to add
+     * @throws IndexOutOfBoundsException if index is out of bounds
      */
     public void add(int index, E data) {
         if (index > size || index < 0) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         }
 
         Node<E> current = head;
@@ -84,7 +89,7 @@ public class LinkedList<E> {
 
     /**
      * Add data at end.
-     * 
+     *
      * @param data data to add
      */
     public void add(E data) {
@@ -92,8 +97,8 @@ public class LinkedList<E> {
     }
 
     /**
-     * Returns whether the value is in teh linked list.
-     * 
+     * Returns whether the value is in the linked list.
+     *
      * @param o an object
      * @return a boolean
      */
@@ -113,13 +118,14 @@ public class LinkedList<E> {
 
     /**
      * Returns value at index.
-     * 
+     *
      * @param index an index
      * @return an E
+     * @throws IndexOutOfBoundsException if index is out of bounds
      */
     public E get(int index) {
         if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         }
         Node<E> current = head;
         for (int i = 0; i < index; i++) {
@@ -129,8 +135,8 @@ public class LinkedList<E> {
     }
 
     /**
-     * Returns index of first occurence.
-     * 
+     * Returns index of first occurrence.
+     *
      * @param o an Object
      * @return an int
      */
@@ -142,7 +148,7 @@ public class LinkedList<E> {
             if (o == null && current.data == null) {
                 return index;
             }
-            if (o.equals(current.data)) {
+            if (o != null && o.equals(current.data)) {
                 return index;
             }
             current = current.next;
@@ -153,13 +159,14 @@ public class LinkedList<E> {
 
     /**
      * Removes at index.
-     * 
+     *
      * @param index the index
      * @return an E
+     * @throws IndexOutOfBoundsException if index is out of bounds
      */
     public E remove(int index) {
         if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         }
 
         Node<E> current = head;
@@ -180,8 +187,8 @@ public class LinkedList<E> {
     }
 
     /**
-     * Removes first occurence.
-     * 
+     * Removes first occurrence.
+     *
      * @param o an Object
      * @return a boolean
      */
@@ -196,7 +203,8 @@ public class LinkedList<E> {
             return true;
         }
         while (current.next != null) {
-            if ((o == null && current.next.data == null) || o.equals(current.next.data)) {
+            if (o == null && current.next.data == null
+                    || o.equals(current.next.data)) {
                 current.next = current.next.next;
                 size--;
                 return true;
@@ -209,14 +217,15 @@ public class LinkedList<E> {
 
     /**
      * Updates value at index.
-     * 
+     *
      * @param index the index
      * @param data  the data
      * @return old E
+     * @throws IndexOutOfBoundsException if index is out of bounds
      */
     public E set(int index, E data) {
         if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         }
 
         Node<E> current = head;
@@ -231,7 +240,7 @@ public class LinkedList<E> {
 
     /**
      * To String method.
-     * 
+     *
      * @return a String
      */
     public String toString() {
@@ -256,8 +265,8 @@ public class LinkedList<E> {
     }
 
     /**
-     * Equals method that returns true;
-     * 
+     * Equals method that returns true.
+     *
      * @param o an Object
      * @return true
      */
