@@ -1,0 +1,40 @@
+1:
+Problem: When beginning research in a new, specialized field, students and professionals frequently find it difficult to locate and arrange the most pertinent academic papers and courses.  Current resources, such as Google Scholar, offer an overwhelming number of keyword-based results without providing a clear learning path or emphasizing foundational versus cutting-edge works.  Every year, this challenge wastes dozens of hours as users attempt to piece together a domain's structure from various sources. � BOTH
+Target Customer: Graduate students, university researchers, etc.
+Customer Need: 9
+Known People With Problem: 10
+Target Market Size: 7
+Competitors: Google Scholar, ResearchGate, Mendeley, Coursera
+
+2:
+Problem: Customers are growing increasingly irritated by the excessive amount of non-recyclable plastic packaging waste produced by weekly deliveries, despite their desire for the convenience and decreased decision fatigue of meal kit services.  They are forced to choose between environmental responsibility and convenience as a result of this conflict, which may cause them to feel guilty or stop using the service entirely.  For busy, environmentally conscious households, the main obstacle to sustainable eating is the absence of a truly zero-waste, efficient supply chain. � BOTH
+Target Customer: Busy professionals and families committed to sustainability who rely on weekly meal kits for dinner planning.
+Customer Need: 8
+Known People With Problem: 15
+Target Market Size: 8
+Competitors: HelloFresh, Blue Apron, Home Chef, local bulk grocers
+
+3:
+Problem: Many new renters and homeowners lack the organizational skills and knowledge necessary to maintain their HVAC systems, appliances, and structural elements on a proactive basis.  This leads to expensive emergency repairs that could have been avoided with basic, timely maintenance like checking seals or changing filters.  There isn't a single, intelligent platform that generates customized, just-in-time maintenance schedules and tutorial links using machine learning based on a home's location, age, and appliances. � BOTH
+Target Customer: First-time homeowners (ages 25-45) and property managers seeking to reduce long-term repair costs.
+Customer Need: 9
+Known People With Problem: 20
+Target Market Size: 9
+Competitors: HomeAdvisor (Angi), Thumbtack, existing calendar apps, generic YouTube tutorials
+
+4:
+Problem: It is almost impossible for students to locate accessible, peaceful, and adequately furnished study areas in academic buildings or campus libraries during exam season.  Particularly when working on group projects, students waste time circling buildings, which causes stress and lowers productivity.  To properly manage this scarce resource, there is a lack of real-time occupancy data and a straightforward reservation system that works directly with university facilities management. � BOTH
+Target Customer: Undergraduate and graduate students attending large universities, particularly those living off-campus.
+Customer Need: 7
+Known People With Problem: 25
+Target Market Size: 5
+Competitors: University Libraries' existing booking software (e.g., LibCal), Google Calendar, campus bulletin boards
+
+5:
+Problem: Home cooks find it difficult to swiftly and accurately modify complicated recipes for ingredient substitutions or dietary restrictions (such as low-sodium or gluten-free) without compromising the final flavor profile.  Errors can occur when manually recalculating ratios and substitute quantities for baking or international cuisine, wasting time and ingredients.  The deep, ingredient-level AI needed to dynamically rewrite and validate the entire recipe process is absent from current recipe apps, which only provide basic search filters. � BOTH
+Target Customer: Home cooks, bakers, and individuals with severe allergies or strict dietary needs (vegan, Keto, etc.).
+Customer Need: 9
+Known People With Problem: 18
+Target Market Size: 8
+Competitors: Allrecipes, Food Network Kitchen, generic search engines
+
