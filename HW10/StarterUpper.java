@@ -142,7 +142,7 @@ public class StarterUpper extends Application {
 
     /**
      * Creates edit controls section.
-     * 
+     *
      * @return A VBox
      */
     private VBox createEditControls() {
@@ -418,6 +418,7 @@ public class StarterUpper extends Application {
             ideas.clear();
             observableIdeas.clear();
             clearFields();
+            handleEditCancel();
 
             File file = new File("ideas.txt");
             if (file.exists()) {
